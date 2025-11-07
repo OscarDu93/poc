@@ -43,6 +43,21 @@ document.addEventListener("DOMContentLoaded", function () {
     ease: "sine.inOut",
   });
 
+  // zoom
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".zoom-container",
+        start: "top top",
+        scrub: 2,
+        pin: true,
+      },
+    })
+    .to("#zoom-element", {
+      width: 500,
+      height: 500,
+    });
+
   // dessin
   // https://scrollmagic.io/examples/advanced/svg_drawing.html
   function pathPrepare(el) {
