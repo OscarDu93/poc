@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
+
+img,
+video {
+  display: block;
+}
+
+.container {
+  min-height: 200vh;
+}
+
+.spacer {
+  height: 100vh;
+  margin-block: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: repeating-linear-gradient(
+    45deg,
+    #606dbc33,
+    #606dbc33 10px,
+    #606dbc00 10px,
+    #606dbc00 20px
+  );
+}
+
+.object-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.object-wrapper ~ .object-wrapper {
+  justify-content: end;
+}
+
+.object {
+  border: 5px solid blue;
+  width: 30%;
+  height: 50vh;
+  opacity: 1;
+  border-radius: 10px;
+}
+
+.slider-mask {
+  border: 5px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* slider track */
+.slider-track {
+  height: 100%;
+  display: inline-flex;
+  border: 5px solid red;
+  border-radius: 5px;
+}
+
+/* slider item (screen) */
+.slider-track .screen {
+  width: calc(100vw - 30px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid blue;
+}
+
+.parallax-container {
+  height: calc(100vh - 40px);
+  margin-block: 10px;
+  padding: 10px;
+  border: 5px solid black;
+  border-radius: 10px;
+  background: rgba(30, 25, 36, 0.8);
+  position: relative;
+}
+
+.parallax-element {
+  border: 3px solid purple;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#element-1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70%;
+  background: rgba(110, 93, 131, 0.8);
+}
+
+#element-2 {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  width: 25%;
+  height: 40%;
+  background: rgba(130, 111, 155, 0.8);
+}
+
+#element-3 {
+  position: absolute;
+  bottom: 30px;
+  right: 100px;
+  width: 10%;
+  height: 10%;
+  background: rgba(182, 171, 196, 0.8);
+}
+
+#template,
+#path {
+  fill: none;
+}
+
+#template {
+  stroke-width: 5px;
+  stroke: #444;
+}
+
+#path {
+  stroke: #0ae448;
+  stroke-width: 20px;
+  visibility: hidden;
+}
+
+.draw-svg {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
