@@ -37,6 +37,7 @@ p {
   );
 }
 
+//intro parallax
 .object-wrapper {
   display: flex;
   flex-direction: column;
@@ -55,6 +56,7 @@ p {
   border-radius: 10px;
 }
 
+// slider
 .h-50 {
   height: 50vh;
 }
@@ -86,6 +88,7 @@ p {
   border: 5px solid blue;
 }
 
+// zoom
 .zoom-container {
   height: calc(100vh - 40px);
   margin-block: 10px;
@@ -112,6 +115,7 @@ p {
   height: 40%;
 }
 
+// parallax
 .parallax-container {
   height: calc(100vh - 40px);
   margin-block: 10px;
@@ -157,6 +161,7 @@ p {
   background: rgba(255, 255, 255, 0.8);
 }
 
+// dessin
 #template,
 #path {
   fill: none;
@@ -179,4 +184,76 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+a:hover {
+  background: white;
+  color: #000;
+  transform: scale(1.1);
+  border-radius: 100%;
+}
+
+// Curseur Customiser
+// Important : ajouté un div vide dans le html avec la bonne class
+
+.cursor {
+  width: 15px;
+  height: 15px;
+  z-index: 11;
+  border-radius: 15px;
+  background: #982d3d;
+  position: fixed;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+  opacity: 0;
+}
+
+.cursor.link-hover {
+  background: #982d3d;
+  transform: scale(1.5);
+}
+
+body {
+  cursor: none;
+}
+
+body:hover .cursor {
+  opacity: 1;
+}
+
+// levitation
+.levitation-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  width: 100vh;
+}
+
+.levitation-object {
+  width: 150px;
+  height: 150px;
+  border: 5px solid black;
+  border-radius: 10px;
+  background: rgba(255, 0, 0, 0.8);
+  animation: slide-in 5s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(100%);
+  }
+
+  50% {
+    transform: translateY(100%);
+  }
+
+  0% {
+    transform: translateY(-0%);
+  }
 }
