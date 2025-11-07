@@ -17,6 +17,10 @@ video {
   min-height: 200vh;
 }
 
+p {
+  font-size: 50px;
+}
+
 .spacer {
   height: 100vh;
   margin-block: 10px;
@@ -51,13 +55,22 @@ video {
   border-radius: 10px;
 }
 
+.h-50 {
+  height: 50vh;
+}
+.h-75 {
+  height: 75vh;
+}
+.h-100 {
+  height: 100vh;
+}
+
 .slider-mask {
   border: 5px solid black;
   border-radius: 10px;
   overflow: hidden;
 }
 
-/* slider track */
 .slider-track {
   height: 100%;
   display: inline-flex;
@@ -65,7 +78,6 @@ video {
   border-radius: 5px;
 }
 
-/* slider item (screen) */
 .slider-track .screen {
   width: calc(100vw - 30px);
   display: flex;
@@ -74,18 +86,44 @@ video {
   border: 5px solid blue;
 }
 
+.zoom-container {
+  height: calc(100vh - 40px);
+  margin-block: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  position: relative;
+}
+
+.zoom {
+  border: 3px solid rgb(255, 0, 0);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#zoom-element {
+  position: absolute;
+  bottom: 40%;
+  left: 10%;
+  right: 10%;
+  height: 10%;
+  background: rgba(194, 194, 194, 0.8);
+}
+
 .parallax-container {
   height: calc(100vh - 40px);
   margin-block: 10px;
   padding: 10px;
   border: 5px solid black;
   border-radius: 10px;
-  background: rgba(30, 25, 36, 0.8);
+  background: rgba(255, 255, 255, 0.8);
   position: relative;
 }
 
 .parallax-element {
-  border: 3px solid purple;
+  border: 3px solid rgb(255, 0, 0);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -98,7 +136,7 @@ video {
   left: 0;
   right: 0;
   height: 70%;
-  background: rgba(110, 93, 131, 0.8);
+  background: rgba(194, 194, 194, 0.8);
 }
 
 #element-2 {
@@ -107,7 +145,7 @@ video {
   left: 40px;
   width: 25%;
   height: 40%;
-  background: rgba(130, 111, 155, 0.8);
+  background: rgba(192, 192, 192, 0.8);
 }
 
 #element-3 {
@@ -116,7 +154,7 @@ video {
   right: 100px;
   width: 10%;
   height: 10%;
-  background: rgba(182, 171, 196, 0.8);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 #template,
